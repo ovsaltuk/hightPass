@@ -1,0 +1,142 @@
+
+h1,h2,h3,h4,h5,p,a{
+  margin: 0;
+}
+
+.reset{
+  &-list{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  &-link{
+    text-decoration: none;
+    color: white;
+  }
+  &-btn{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  &-input {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: transparent;
+
+  }
+  &-link:focus,
+  &-link:focus-visible,
+  &-btn:focus,
+  &-btn:focus-visible,
+  &-input:focus,
+  &-input:focus-visible {
+    outline: none;
+  }
+
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1290px;
+  
+}
+
+.hash {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 6px 15px;
+  background-color: $colorMainDark;
+  &__text {
+    @include fontHash;
+  }
+}
+
+.title {
+  @include fontSecondaryBold;
+  font-size: 24px;
+}
+
+.common-btn {
+  display: inline-block;
+  padding: 12.5px 19px;
+  @include fontMainBold;
+  color: white;
+  background-color: $colorAccentBright;
+  border: 3px solid $colorAccentBright;
+  box-sizing: border-box;
+  transition: all .3s ease-in-out;
+}
+
+.common-btn_transparent {
+  background-color: transparent;
+  transition: all .3s ease-in-out;
+}
+
+.close-btn {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: #808080;
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    height: 15px;
+    width: 2px;
+    background-color: $colorSecondaryLight;
+    transform-origin: center;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+
+
+
+@media (max-width: 1310px) {
+  .container {
+    max-width: 962px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    max-width: 710px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 21px;
+  }
+  .hash {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    padding: 1px 7px;
+    background-color: $colorMainDark;
+    &__text {
+      font-size: 12px;
+    }
+  }
+  .title {
+    font-size: 18px;
+  }
+  .common-btn {
+    padding: 9px 19px;
+  }
+}

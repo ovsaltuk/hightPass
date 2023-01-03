@@ -1,0 +1,221 @@
+.contacts {
+  padding-bottom: 68px;
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__grid-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 30px;
+  }
+  &__map {
+    position: relative;
+    overflow: hidden;
+    &-address {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 51%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 24px;
+      padding-right: 56px;
+      padding-left: 60px;
+      background-color:  rgba(32, 32, 32, 0.85);
+      z-index: 3000;
+    }
+    &-title {
+      margin-bottom: 5px;
+      @include fontSecondary;
+      font-size: 24px;
+      color: white;
+    }
+    &-descr {
+      margin-bottom: 5px;
+      @include fontMain;
+      line-height: 28px;
+      color: $colorSecondary;
+    }
+    &-tel {
+      color: $colorAccentBright;
+      white-space: nowrap;
+      &-descr {
+        display: none;
+      }
+      & svg{
+        width: 16.5px;
+        height: 16.5px;
+      }
+    }
+    &-address-close {
+      position: absolute;
+      top: 15px;
+      right: 22px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 10px;
+    &-title {
+      margin-top: -10px;
+      margin-bottom: 3px;
+      @include fontSecondary;
+      font-size: 24px;
+      color: $colorMainDark;
+    }
+    &-descr {
+      margin-bottom: 14px;
+      @include fontMain;
+      line-height: 22px;
+      color: $colorMainLight;
+    }
+    &-input {
+      padding: 15px 23px;
+      width: 100%;
+      max-width: 100%;
+      background-color: $colorSecondaryLight;
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      
+      &-wrapper {
+        position: relative;
+        margin-bottom: 20px;
+        width: 100%;
+        &_grow {
+          flex-grow: 1;
+        }
+        & textarea {
+          height: 100%;
+        }
+      }
+    }
+    
+  }
+  
+}
+
+.contacts__close-btn {
+  width: 20px;
+  height: 20px;
+  &::after, &::before {
+    content: '';
+    top: 20%;
+    left: 45%;
+    height: 12px;
+    width: 2px;
+  }
+}
+
+[class*="-ground-pane"] {
+  filter: grayscale(1);
+}
+
+.js-validate-error-label {
+  position: absolute;
+  top: 3px;
+  left: 23px;
+  @include fontMain;
+  font-size: 9px;
+  color: #FF3030 !important;
+}
+
+.js-validate-error-field {
+  border-color: #FF3030;
+  &::placeholder {
+    color: #FF3030;
+  }
+}
+
+@media (max-width: 1310px) {
+  .contacts {
+    &__grid-wrapper {
+      grid-template-columns: 5fr 3fr;
+      column-gap: 18px;
+    }
+    &__map-title {
+      margin-bottom: 0;
+    }
+    &__map-address {
+      top: auto;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      align-items: baseline;
+      justify-content: baseline;
+      padding-left: 30px;
+      padding-right: 44%;
+      padding-bottom: 20px;
+      padding-top: 22px;
+    }
+    &__map-tel {
+      display: none;
+      &-descr {
+        display: inline;
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .contacts {
+    &__grid-wrapper {
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
+    &__form {
+      padding: 0;
+      &-title {
+        margin-top: 0;
+      }
+      &-input {
+        max-width: 466px;
+      }
+      &-descr {
+        max-width: 70%;
+      }
+    }
+    &__form-input-wrapper_grow {
+      min-height: 149px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contacts {
+    &__map {
+      &-address {
+        padding: 26px 30px 14px 19px;
+      }
+      &-title {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+      &-descr {
+        margin-bottom: 13px;
+        font-size: 14px;
+        line-height: 18px;
+        
+      }
+      &-tel {
+        display: flex;
+        font-size: 14px;
+        & svg {
+          margin-right: 5px;
+          width: 15px;
+          height: 15px;
+        }
+      }
+      &-tel-descr {
+        display: none;
+        font-weight: 400;
+      }
+    }
+    &__form-descr {
+      max-width: 100%;
+    }
+  }
+}

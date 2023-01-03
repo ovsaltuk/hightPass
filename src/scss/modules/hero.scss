@@ -1,0 +1,121 @@
+.hero {
+  padding-top: 41px;
+  padding-bottom: 65px;
+  &__container {
+    display: grid;
+    column-gap: 30px;
+    row-gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-template-areas: 
+      "a a b b"
+      "a a c d";
+    
+  }
+  &__item:first-child {
+    position: relative;
+    grid-area: a;
+  }
+  &__item:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    grid-area: b;
+  }
+  &__item:nth-child(3) {
+    grid-area: c;
+  }
+  &__item:nth-child(4) {
+    grid-area: d;
+  }
+  &__item-img {
+    width: 100%;
+  }
+  &__text {
+    margin-bottom: 18px;
+    @include fontSecondaryBold;
+    line-height: 104%;
+  }
+  &__item-content {
+    position: absolute;
+    bottom: 64px;
+    left: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    &-subtitle {
+      margin-bottom: 3px;
+      @include fontMain;
+      line-height: 19px;
+      color: white;
+    }
+    &-title {
+      margin-bottom: 18px;
+      @include fontSecondaryBold;
+      font-size: 36px;
+      line-height: 104%;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 1310px) {
+  .hero {
+    padding-top: 33px;
+    &__text {
+      margin-bottom: 25px;
+    }
+    &__item-content {
+      bottom: 33px;
+      left: 30px;
+      &-subtitle {
+        margin-bottom: 9px;
+      }
+      &-title {
+        margin-bottom: 19px;
+        font-size: 34px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero {
+    padding-top: 37px;
+    &__text {
+      margin-bottom: 18px;
+      font-size: 22px;
+
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 29px;
+    padding-bottom: 40px;
+    &__container {
+      row-gap: 31px;
+      grid-template-areas: 
+      "a a a a"
+      "b b b b"
+      "c c d d";
+    }
+    &__item {
+      &-content-subtitle {
+        font-size: 14px;
+      }
+      &-content-title {
+        margin-bottom: 15px;
+        max-width: 90%;
+        font-size: 24px;
+      }
+      &-link {
+        padding: 9px 19px;
+        font-size: 14px;
+      }
+    }
+    &__text {
+      font-size: 18px;
+    }
+  }
+}

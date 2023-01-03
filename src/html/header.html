@@ -1,0 +1,60 @@
+<header class="header">
+  <div class="container header__container">
+    <picture>
+      <source media="(max-width:767px)" srcset="@img/header/logo-320.png">
+      <source media="(max-width:1620px)" srcset="@img/header/logo-1024.png" >
+      <img src="@img/header/logo-1920.png" alt="logo" class="logo header__logo">
+    </picture>
+    <nav class="nav header__nav">
+      <ul class="reset-list nav__list">
+        <li class="nav__item"><a href="#about" class="nav__link reset-link">О студии</a></li>
+        <li class="nav__item"><a href="#projects" class="nav__link reset-link">Наши проекты</a></li>
+        <li class="nav__item"><a href="#" class="nav__link reset-link">Услуги</a></li>
+        <li class="nav__item"><a href="#" class="nav__link reset-link">Мастер-классы</a></li>
+        <li class="nav__item"><a href="#contacts" class="nav__link reset-link">Контакты</a></li>
+      </ul>
+    </nav>
+    
+    <div class="header__search-wrapper">
+      <button class="search-btn reset-btn header__search-btn" tabindex="-1">
+        <svg>
+          <use xlink:href="@img/icons/icons.svg#search"></use>
+        </svg>
+      </button>
+      <form action="#" class="search-form search-form_disable" tabindex="-1">
+        <input type="text" class="search-form__input reset-input" placeholder="Что будем иcкать?" tabindex="-1">
+        <button class="reset-btn close-btn search-form__close-btn" tabindex="-1">
+        </button>
+      </form>
+    </div>
+  </div>
+</header>
+<div class="submenu">
+  <div class="container">
+    <button class="reset-btn burger">
+      <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="20" height="2" fill="white"/>
+        <rect y="8" width="20" height="2" fill="white"/>
+        <rect y="16" width="10" height="2" fill="white"/>
+        </svg>
+        
+    </button>
+    <nav class="nav submenu__nav ">
+      <ul class="reset-list nav__list submenu__nav-list">
+        <button class="reset-btn close-btn submenu__close-btn"></button>
+        <li class="nav__item"><a href="#about" class="nav__link reset-link">О студии</a></li>
+        <li class="nav__item"><a href="#projects" class="nav__link reset-link">Наши проекты</a></li>
+        <li class="nav__item"><a href="#" class="nav__link reset-link">Услуги</a></li>
+        <li class="nav__item"><a href="#" class="nav__link reset-link">Мастер-классы</a></li>
+        <li class="nav__item"><a href="#contacts" class="nav__link reset-link">Контакты</a></li>
+        <a href="#" class="reset-link nav__link-tel">
+          <svg>
+            <use xlink:href="@img/icons/icons.svg#tel"></use>
+          </svg>
+          +7 495 424-23-532
+        </a>
+
+      </ul>
+    </nav>
+  </div>
+</div>

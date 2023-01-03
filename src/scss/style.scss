@@ -1,0 +1,33 @@
+@import "./libs/normalize";
+@import "./modules/mixins";
+@import "./modules/variables";
+@import "./modules/common";
+@import "fonts";
+@import "./modules/hero";
+@import "./modules/about";
+@import "./modules/projects";
+@import "./modules/contacts.scss";
+@import "./modules/header";
+@import "./modules/footer";
+@import "./modules/effects";
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Roboto, TTFirsNeue, sans-serif;
+}
+
+a {
+  outline: none;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}

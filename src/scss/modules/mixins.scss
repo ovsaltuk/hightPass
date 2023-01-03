@@ -1,0 +1,37 @@
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+//fonts
+@mixin fontMain {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@mixin fontMainBold {
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+
+@mixin fontSecondary {
+  font-family: TTFirsNeue;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@mixin fontSecondaryBold {
+  font-family: TTFirsNeue;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+@mixin fontHash {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+}

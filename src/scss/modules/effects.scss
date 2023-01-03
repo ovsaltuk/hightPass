@@ -1,0 +1,118 @@
+@media (min-width: 1311px) {
+  .nav__link {
+    position: relative;
+    z-index: 1;
+    color: white;
+    transition: color .3s ease-in-out;
+  }
+  .nav__link::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -5px;
+    right: -5px;
+    background-color: $colorFocus;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+  .nav__link:focus-visible::after {
+    opacity: 1;
+  }
+
+  .search-form {
+    &__input:focus-visible {
+      border-color: $colorAccentBright;
+    }
+  }
+
+  .common-btn:focus-visible {
+    border-color: $colorAccentDarker;
+
+  }
+
+  .common-btn_transparent:focus-visible {
+    border-color: $colorAccentBright;
+    background-color: $colorFocus;
+  }
+
+  .form__input,
+  .contacts__form-input {
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+  }
+
+  .form__input:focus-visible,
+  .contacts__form-input:focus-visible {
+    border-color: $colorAccentBright;
+  }
+
+  .footer__link svg path {
+    transition: all .3s ease-in-out;
+  }
+
+  a.footer__link:focus-visible svg path {
+    fill: $colorFocus;
+  }
+
+}
+
+//hover 
+
+.nav__link:hover {
+  color: $colorAccentBright;
+}
+
+.nav__link:hover::after {
+  display: none;
+} 
+
+.search-form {
+  &__input:hover {
+    border-color: $colorAccentBright;
+  }
+}
+
+.common-btn:hover {
+  background-color: $colorFocus;
+  border-color: $colorFocus;
+}
+
+.form__input:hover::placeholder,
+.contacts__form-input:hover::placeholder {
+  color: $colorAccentBright;
+}
+
+.form__input:hover,
+.contacts__form-input:hover {
+  border-color: transparent;
+}
+
+a.footer__link:hover svg path {
+  fill: $colorAccentBright;
+}
+
+//active
+
+.nav__link:active {
+  color: $colorAccentDarker;
+}
+
+.nav__link:active::after {
+  display: none;
+}
+
+.common-btn:active,
+.common-btn_transparent:active {
+  background-color: $colorAccentDarker;
+  border-color: $colorAccentDarker;
+}
+
+a.footer__link:active svg path {
+  fill: $colorAccentDarker;
+}
+
+
+
